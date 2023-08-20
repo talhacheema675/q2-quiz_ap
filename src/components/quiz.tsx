@@ -44,7 +44,7 @@ return(
                 <div className="md:invisible visible"><button onClick={()=> {setvalue(value-value); setRight(right-right); setWrong(wrong-wrong)}} className={`${value==39?"invisible":"bg-green-600 text-2xl font-bold w-44 h-10 mt-10 ml-10"} md:invisible visible`}>Start again</button></div>
             
         </div>
-            <div className={`${value!=39?"invisible":"absolute top-16 text-center bg-gray-500 md:p-10 p-1 md:w-2/3 w-64 rounded-3xl md:h-64 h-96 md:ml-44 m-2 ml-4 md:mt-32"}`}>
+            <div className={`${value!=39?"invisible":"absolute top-16 text-center bg-gray-500 md:p-10 p-1 md:w-2/3 w-72 rounded-3xl md:h-64 h-96 md:ml-44 m-2 ml-4 md:mt-32"}`}>
             <p className="text-5xl font-bold">Your Score</p>
             <p className="text-3xl text-green-700">total correct : {right}</p>
             <p className="text-3xl text-red-700">Total Wrong : {wrong}</p>
