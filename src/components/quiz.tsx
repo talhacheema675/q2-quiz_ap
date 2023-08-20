@@ -36,10 +36,10 @@ return(
                 </div>
                 <div className="pt-6 text-xl flex flex-col text-left"> 
                     
-                        <button onClick={()=>{setWrong(wrong+1); setvalue(value+1) }} className="border-2 border-solid w-64 h-16 border-black rounded-2xl">{mydata?.results[value].incorrect_answers[0]}</button>
-                        <button onClick={()=>{setWrong(wrong+1); setvalue(value+1) }} className="border-2 border-solid w-64 h-16 border-black rounded-2xl">{mydata?.results[value].incorrect_answers[1]}</button>
-                        <button onClick={()=>{setWrong(wrong+1); setvalue(value+1) }} className="border-2 border-solid w-64 h-16 border-black rounded-2xl">{mydata?.results[value].incorrect_answers[2]}</button>
-                        <button onClick={()=>{setRight(right+1); setvalue(value+1) }} className="border-2 border-solid w-64 h-16 border-black rounded-2xl">{mydata?.results[value].correct_answer}</button>
+                        <button onClick={()=>{setWrong(wrong+1); setvalue(value+1) }} className="border-2 border-solid w-64 h-16 border-black rounded-2xl pt-2">{mydata?.results[value].incorrect_answers[0]}</button>
+                        <button onClick={()=>{setWrong(wrong+1); setvalue(value+1) }} className="border-2 border-solid w-64 h-16 border-black rounded-2xl pt-1">{mydata?.results[value].incorrect_answers[1]}</button>
+                        <button onClick={()=>{setWrong(wrong+1); setvalue(value+1) }} className="border-2 border-solid w-64 h-16 border-black rounded-2xl pt-1">{mydata?.results[value].incorrect_answers[2]}</button>
+                        <button onClick={()=>{setRight(right+1); setvalue(value+1) }} className="border-2 border-solid w-64 h-16 border-black rounded-2xl pb-2">{mydata?.results[value].correct_answer}</button>
                 </div>
                 <button onClick={()=> {setvalue(value-value); setRight(right-right); setWrong(wrong-wrong)}} className="bg-green-600 text-2xl font-bold w-44 h-10 mt-10 ml-10 md:invisible visible">Start again</button>
             
