@@ -30,7 +30,7 @@ return(
     <div className={`${value==39?"invisible":"bg-gray-500 p-4 md:w-2/3 w-80 rounded-3xl h-max md:mx-64 md:my-32 m-4 flex md:flex-row flex-col "}`}>
                 <div className="w-2/3 flex flex-col">
                     <h1 className="text-3xl font-bold">Question {value +1}/40</h1>
-                    <label className="text-center md:text-2xl text-lg md:h-44 h-24 ">{mydata?.results[value].question}</label>
+                    <label className="text-center md:text-2xl text-lg md:h-44 h-28 ">{mydata?.results[value].question}</label>
                     <div className="md:visible invisible"><button onClick={()=> {setvalue(value-value); setRight(right-right); setWrong(wrong-wrong)}} className={`${value!=39?"bg-green-600 text-2xl font-bold w-44 h-10 mt-10 ml-10": "invisible"}`}>Start again</button></div>
                    
                 </div>
