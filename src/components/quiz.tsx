@@ -27,12 +27,11 @@ const Ueffect=()=>{
     );
 return(
    <div>
-    <div className={`${value==39?"invisible":"bg-gray-500 p-4 w-2/3 rounded-3xl h-80 mx-64 my-32"}`}>
-            <div className="flex flex-row ">
+    <div className={`${value==39?"invisible":"bg-gray-500 p-4 md:w-2/3 w-fit rounded-3xl h-max md:mx-64 md:my-32 m-4 flex md:flex-row flex-col "}`}>
                 <div className="w-2/3 flex flex-col">
                     <h1 className="text-3xl font-bold">Question {value +1}/40</h1>
-                    <label className="text-center text-2xl h-44 ">{mydata?.results[value].question}</label>
-                    <button onClick={()=> {setvalue(value-value); setRight(right-right); setWrong(wrong-wrong)}} className="bg-green-600 text-2xl font-bold w-44 h-10 mt-10 ml-10 ">Start again</button>
+                    <label className="text-center text-2xl md:h-44 h-12 ">{mydata?.results[value].question}</label>
+                    <button onClick={()=> {setvalue(value-value); setRight(right-right); setWrong(wrong-wrong)}} className="bg-green-600 text-2xl font-bold w-44 h-10 mt-10 ml-10 md:visible invisible">Start again</button>
                    
                 </div>
                 <div className="pt-6 text-xl flex flex-col text-left"> 
@@ -42,7 +41,8 @@ return(
                         <button onClick={()=>{setWrong(wrong+1); setvalue(value+1) }} className="border-2 border-solid w-64 h-16 border-black rounded-2xl">{mydata?.results[value].incorrect_answers[2]}</button>
                         <button onClick={()=>{setRight(right+1); setvalue(value+1) }} className="border-2 border-solid w-64 h-16 border-black rounded-2xl">{mydata?.results[value].correct_answer}</button>
                 </div>
-            </div>
+                <button onClick={()=> {setvalue(value-value); setRight(right-right); setWrong(wrong-wrong)}} className="bg-green-600 text-2xl font-bold w-44 h-10 mt-10 ml-10 md:invisible visible">Start again</button>
+            
         </div>
             <div className={`${value!=39?"invisible":"absolute top-16 text-center bg-gray-500 p-10 w-2/3 rounded-3xl h-64 ml-44 mt-32"}`}>
             <p className="text-5xl font-bold">Your Score</p>
