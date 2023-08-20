@@ -1,11 +1,18 @@
    "use client"
 import React, { useEffect, useState } from "react";
+interface QuizData {
+  results: {
+    question: string;
+    incorrect_answers: string[];
+    correct_answer: string;
 
+  }[];
+}
 const Ueffect=()=>{
     const [value,setvalue]=useState(0)
     const[wrong,setWrong]=useState(0)
     const[right,setRight]=useState(0)
-    const [mydata,setmydata]=useState(null);
+    const [mydata,setmydata]=useState<QuizData | null>(null);
     useEffect(()=>{
         const gettingdata= async()=>{
             const data=await fetch('https://opentdb.com/api.php?amount=40&category=23&difficulty=medium&type=multiple');
